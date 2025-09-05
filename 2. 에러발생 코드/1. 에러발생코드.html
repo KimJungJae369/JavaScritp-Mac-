@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>에러 발생 코드</title>
+</head>
+<body>
+
+    <div id="counter">0</div>
+    <button id="increase">+</button>
+    <button id="decrease">-</button>
+
+    <!-- 
+        디버깅 : 에러 메시지를 확인하고 에러가 발생한 원인을 제거
+        렌더링 : 컴퓨터가 이해하는 언어(코드,데이터)를 사람이 볼 수 있는 형태(화면,그림,글자)로 바꾸는 것 / 동영상,이미지,애니메이션이 렌더링 되는 과정
+    -->
+
+    <script>
+        const counter = document.querySelector('#counter'); 
+        // 에러요소 : counter-00 -> counter
+        // 에러원인 : id속성값이 틀림
+        // 해결방법 : id속성값을 정확히 입력
+        const increase = document.querySelector('#increase');
+        const decrease = document.querySelector('#decrease');
+
+
+        let num = 0; // 변수선언과 동시에 초기화
+        const render = function(){counter.innerHTML = num;}; // 렌더링 함수, num값을 counter에 렌더링, 함수 선언과 동시에 초기화
+
+        increase.onclick = function(){ // 'increase'클릭 이벤트 준비
+            // onclick : 클릭 이벤트 핸들러
+            num++; // 'increase'을 클릭하면 num값 1증가
+            console.log('increase 클릭됨', num); // 디버깅용 로그, num값 출력
+            render(); // 렌더링 함수 호출, 
+        }
+
+        decrease.onclick = function(){ // 'decrease'클릭 이벤트 준비
+            num--; // 'decrease'을 클릭하면 num값 1감소
+            console.log('decrease 클릭됨', num); // 디버깅()용 로그, num값 출력
+            render(); // 렌더링 함수 호출
+        }
+    </script>
+    
+</body>
+</html>
