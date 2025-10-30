@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 타입</title>
+</head>
+<body>
+
+    <!-- 
+        문자열 타입<string type>
+        = 텍스트 데이터를 나타내는 데 사용
+        = 문자열은 0개 이상의 16비트 유니코드 문자의 집합으로 전 세계 대부분의 문자를 표현할 수 있다
+        = 문자열은 작은따옴표(''), 큰따옴표(""), 백틱(``)으로 텍스트를 감싼다
+        = 문자열을 따옴표로 감싸는 이유는 키워드나 식별자 같은 토큰과 구분하기 위해서다
+        = 문자열을 따옴표로 감싸지 않으면 자바스크립트 엔진은 키워드나 식별자 같은 토큰으로 인식
+        = 만약 따옴표로 문자열을 감싸지 않는다면 스페이스와 같은 공백 문자도 포함시킬 수 없다
+        = 자바스크립트의 문자열은 원시 타입이며 변경 '불가능한 값'
+        = 이것은 문자열이 생성되면 그 문자열 변경할 수 없다는 것을 의미
+    -->
+
+    <script>
+        var str1 = 'Hello World!'; // 작은따옴표
+        var str2 = "Hello World!"; // 큰따옴표
+        var str3 = `Hello World!`; // 백틱
+
+        console.log(str1); // Hello World!
+        console.log(str2); // Hello World!
+        console.log(str3); // Hello World!
+    </script>
+    
+</body>
+</html>
