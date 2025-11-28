@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>undefined 타입</title>
+</head>
+<body>
+
+    <!-- 
+        undefined 타입
+        = undefined 타입의 값은 오직 하나인 undefined뿐이다
+        = 'var' 키워드로 선언한 변수는 암묵적으로 undefined로 초기화된다
+        = 다시 말해 변수 선언에 의해 확보된 메모리 공간을 처음 할당이 이뤄질 때까지 빈 상태(대부분 비어 있지 않고 '쓰레기 값'들이 있다)로 내버려두지 않고 자바스크립트 엔진이 undefined로 초기화
+        = 따라서 변수를 선언한 이후 값을 할당하지 않는 변수를 참조하면 undefined가 반환
+        = 개발자가 의도적으로 할당하기 위한 값이 아니라 자바스크립트 엔진이 변수를 초기화할 때 사용하는 값
+        = 변수를 참조했을 때 undefined가 반환된다면 참조한 변수가 선언 이후 값이 할당된 적이 없는 즉 초기화되지 않는 변수라는 의미
+        = 자바스크립트 엔진이 변수를 초기화하하는 데 사용하는 undefined를 개발자가 의도적으로 변수에 할당한다면 undefined의 본래 취지와 어긋날뿐더러 혼란을 줄 수 있다
+        = 따라서 변수에 값을 초기화를 하려면 'null'을 사용해야 한다
+
+        Tip)
+            선언과 정의
+            = undefined를 직역하면 '정의되지 않는'
+            = 변수는 '선언한다'라고 표현하고 함수는 '정의한다'라고 표현한다
+    -->
+
+    <script>
+        var foo;
+        console.log(foo); // undefined
+    </script>
+    
+</body>
+</html>
