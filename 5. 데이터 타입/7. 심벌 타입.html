@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>심벌 타입</title>
+</head>
+<body>
+
+    <!-- 
+        심벌 타입
+        = '심벌(symbol)'은 ES6에서 도입된 7번째 데이터 타입 변경 불가능한 원시 타입
+        = 심벌 값은 다른 값과 중복되지 않는 유일무이한 값
+        = 이름이 충돌할 위험이 없는 객체의 유일한 프로퍼티 키를 만들기 위해 사용
+        = 심벌은 'symbol 함수'를 호출해 생성한다
+        = 이때 생성된 심벌 값은 외부에 노출되지 않으며 다른 값과 절대 중복되지 않는 유일무이한 값
+    -->
+
+    <script>
+        var key = Symbol('key'); // 심벌 값 생성
+        console.log(typeof key); // symbol
+
+        var obj = {}; // 객체 생성
+
+        obj[key] = 'value'; // 심벌 값을 프로퍼티 키로 사용
+        console.log(obj[key]); // value
+    </script>
+    
+</body>
+</html>
